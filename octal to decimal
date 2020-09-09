@@ -1,0 +1,27 @@
+"""
+Given an octal number, convert the given octal number into its equivalent decimal number.
+For example, octal number 1907 has to be converted to decimal.
+
+7 * 8^0 = 7
+0 * 8^1 = 0
+9 * 8^2 = 576
+1 * 8^3 = 512
+﻿
+512 + 576 + 0 + 7 = 1095
+﻿
+The decimal equivalent of octal number 1907 is 1095
+"""
+import math
+def octal_to_decimal(octal):
+    decimal = 0
+    i = 0
+    octal=octal[::-1]
+    #print(octal)
+    while(i<len(octal)):
+        decimal += int(octal[i]) * (8**i)
+        #print(decimal)
+        i = i + 1
+    return decimal
+
+octal = int(input())
+print(int(octal_to_decimal(str(octal))))
