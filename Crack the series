@@ -1,0 +1,31 @@
+"""
+Given the series as follows 2 2 4 8 16 512....... Identify the nth term of the series. Answers can be very large use BigInt in Java.
+Input:
+First line consists of Q queries. Each of the next Q lines contain a number N which represents the Nth term of the series.
+Output:
+Output the Nth term of the series.
+Constraints:
+1<=Q<=50
+1<=N<=12
+Example:
+Input:
+2
+4
+7
+Output:
+8
+256
+"""
+n=int(input())
+while(n>0):
+    el=int(input())
+    if(el%2==0):
+        e=int(el/2)-1
+        re=pow(2,pow(3,e))
+    else:
+        e=int(el/2)
+        re=pow(2,pow(2,e))
+    print(re)
+    n=n-1
+
+    
